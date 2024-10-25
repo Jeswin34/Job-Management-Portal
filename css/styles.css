@@ -1,0 +1,588 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1f2937;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(135deg, rgba(14, 165, 233, 0.8), rgba(99, 102, 241, 0.8)), url('hero-bg.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin: 0 15px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #3b82f6; /* Primary button color */
+    color: white;
+    padding: 12px 30px; /* Increased padding for better appearance */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.1rem; /* Slightly larger font */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.btn-primary:hover {
+    background-color: #2563eb; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.btn-secondary {
+    background-color: #14b8a6;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #0d9488;
+    transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+    margin: 40px 0;
+    text-align: center;
+}
+
+#job-list h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+#jobs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.job-list .job {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-list .job:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.job h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.job p {
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+/* Job Icons */
+.job .job-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.job .job-icons i {
+    font-size: 1.2rem;
+    color: #3b82f6;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #14b8a6;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+.cta-section .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    background-color: #ffffff;
+    color: #14b8a6;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #0d9488;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #1f2937;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    #jobs-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form Container Styles */
+.form-container {
+    max-width: 400px; /* Set a max width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Header Styles */
+header {
+    text-align: center; /* Center header text */
+    margin-bottom: 40px; /* Space below the header */
+}
+
+/* Navigation Styles */
+nav {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center items in the nav */
+    gap: 15px; /* Space between the buttons */
+    margin-top: 20px; /* Space above the nav */
+}
+
+/* Form Styles */
+form {
+    margin: 20px 0;
+    text-align: center; /* Center the button within the form */
+}
+
+
+/* Form Title */
+.form-container h2 {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+    color: #1f2937; /* Dark text color */
+}
+
+/* Input Fields */
+.form-group {
+    margin-bottom: 20px; /* Space between fields */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 14px; /* Padding inside the input */
+    border: 1px solid #e2e8f0; /* Light border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+input:focus {
+    outline: none; /* Remove default outline */
+    border-color: #3b82f6; /* Primary color on focus */
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3); /* Add shadow on focus */
+}
+
+/* Submit Button */
+.btn-submit {
+    background-color: #3b82f6; /* Primary button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    width: 100%; /* Full width */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn-submit:hover {
+    background-color: #2563eb; /* Darker shade on hover */
+}
+
+/* Link Styles */
+a {
+    display: block; /* Block display for links */
+    text-align: center; /* Center text */
+    margin-top: 10px; /* Space above */
+    color: #3b82f6; /* Primary color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+    padding: 20px;
+    background-color: #ffffff; /* Light background for better contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1f2937; /* Dark text color for headings */
+    border-bottom: 2px solid #3b82f6; /* Underline with primary color */
+    padding-bottom: 10px; /* Space between heading and underline */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #e2e8f0; /* Light border */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+th {
+    background-color: #3b82f6; /* Header background */
+    color: white;
+    font-weight: 700;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f5f9; /* Light gray for even rows */
+}
+
+tr:hover {
+    background-color: #e0f2fe; /* Light blue on hover */
+}
+
+.delete-btn, .action-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-btn {
+    background-color: #f44336; /* Red for delete */
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+    transform: scale(1.05);
+}
+
+.action-btn {
+    background-color: #4caf50; /* Green for action */
+    color: white;
+}
+
+.action-btn:hover {
+    background-color: #388e3c; /* Darker green on hover */
+    transform: scale(1.05);
+}
+
+/* Logout Button Styles */
+#logout {
+    padding: 10px 20px;
+    background-color: #14b8a6; /* Match the secondary button color */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#logout:hover {
+    background-color: #0d9488; /* Darker shade on hover */
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 0.9rem; /* Slightly smaller text for mobile */
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    #logout {
+        width: 100%; /* Full width logout button on small screens */
+    }
+}
+
+
+/* Logout Button Styles */
+#logout {
+    padding: 10px 20px;
+    background-color: #14b8a6; /* Match the secondary button color */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#logout:hover {
+    background-color: #0d9488; /* Darker shade on hover */
+    transform: scale(1.05);
+}
+
+.apply-btn {
+    background-color: #3b82f6; /* Primary button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #2563eb; /* Darker shade on hover */
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.hero {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Navigation Styles */
+nav {
+    margin-top: 15px;
+}
+
+nav .btn {
+    margin: 0 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.8;
+}
+
+/* Profile Card Styles */
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Job List Styles */
+.job-list {
+    margin-top: 20px;
+}
+
+.application, .job {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.application:hover, .job:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    color: #007BFF;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#user-info {
+    margin-bottom: 30px; /* Space below the user info section */
+}
+
+.profile-card {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px; /* Padding for inner content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.profile-picture {
+    width: 80px; /* Adjust the size as needed */
+    height: 80px; /* Keep it square */
+    border-radius: 50%; /* Circular image */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.profile-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+.profile-card p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+.profile-card strong {
+    font-weight: bold; /* Ensure strong text stands out */
+}
+
+#user-name {
+    font-size: 1.5em; /* Larger font size for the name */
+    color: #333; /* Darker color for the name */
+}
