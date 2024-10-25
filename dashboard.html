@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content container">
+            <h1 class="fade-in">Welcome to Your Dashboard</h1>
+            <nav class="fade-in">
+                <a href="index.html" class="btn-primary">Home</a>
+                <span id="logout-container">
+                    <a href="#" id="logout" class="btn btn-secondary">Logout</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="user-info">
+            <h2>Your Profile</h2>
+            <div class="profile-card">
+                <img src="css/placeholder-image.png" alt="Profile Picture" class="profile-picture">
+                <h3>Welcome, <span id="user-name">Loading...</span>!</h3> <!-- Updated to show dynamic name -->
+                <p><strong>Email:</strong> <span id="user-email">Loading...</span></p> <!-- Updated to show dynamic email -->
+            </div>
+        </section>
+
+        <section id="applied-jobs">
+            <!-- <h2>Jobs You've Applied For</h2> -->
+            <div class="job-list" id="job-actions">
+                <!-- Job cards will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Job Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+</html>

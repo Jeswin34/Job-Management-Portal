@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content container">
+            <h1 class="fade-in">Admin Dashboard</h1>
+            <nav class="fade-in">
+                <a href="index.html" class="btn-primary">Home</a>
+                <span id="logout-container">
+                    <a href="#" id="logout" class="btn btn-secondary">Logout</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="users-section">
+            <h2>Users</h2>
+            <table id="users-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User rows will be dynamically loaded here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="jobs-section">
+            <h2>Jobs</h2>
+            <table id="jobs-table">
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Employer</th>
+                        <th>Date Posted</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Job rows will be dynamically loaded here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="applications-section">
+            <h2>Applications</h2>
+            <table id="applications-table">
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Applicant</th>
+                        <th>Resume</th>
+                        <th>Status</th>
+                        <th>Date Applied</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Application rows will be dynamically loaded here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Job Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+</html>

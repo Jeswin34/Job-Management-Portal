@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Job - Job Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Apply for Job</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <span id="logout-container">
+                <a href="#" id="logout" class="btn btn-secondary">Logout</a>
+            </span>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('token');
+            const logoutContainer = document.getElementById('logout-container');
+
+            // Show the logout link if the user is logged in
+            if (token) {
+                logoutContainer.style.display = 'inline'; // Show the Logout link
+            }
+        });
+    </script>
+
+    <main>
+        <div id="job-details">
+            <h2>Job Title</h2>
+            <p id="job-description">Job description goes here...</p>
+        </div>
+
+        <form id="apply-job-form" enctype="multipart/form-data">
+            <input type="hidden" id="jobId" name="jobId">
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            <button type="submit">Submit Application</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Job Portal</p>
+    </footer>
+
+    <script src="js/jobs.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const params = new URLSearchParams(window.location.search);
+            const jobId = params.get('jobId');
+            if (jobId) {
+                document.getElementById('jobId').value = jobId;
+
+                // Fetch job details and display them
+                try {
+                    const response = await fetch(`/api/jobs/${jobId}`);
+                    const job = await response.json();
+                    document.querySelector('#job-details h2').innerText = job.title;
+                    document.getElementById('job-description').innerText = job.description;
+                } catch (err) {
+                    console.error('Error fetching job details:', err);
+                    alert('Failed to load job details.');
+                }
+            } else {
+                alert('Invalid job ID');
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>
